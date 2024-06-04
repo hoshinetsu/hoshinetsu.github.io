@@ -18,48 +18,63 @@
     <main>
         <header>
             <div style="width: fit-content;">
-                <div class="logotype" style="margin:0 auto; text-align: center;">
-                    ho<span>shine</span>tsu<br>
+                <div class="logotype" style="margin:0 auto; text-align: center;"> ho<span>shine</span>tsu<br>
                     <div class="lore">the biggest little rat thats ever lived.</div>
                 </div>
             </div>
         </header>
         <div class="content">
-            <article style="padding-top:20px">
+            <article>
                 <div class="title" title="did ya know this has some hidden meaning? ;33">
-                    <h2 data-nosnippet><span class="green link" title="yamete kudasai..">~</span>/<span class="lime">security-protocol</span>::<span class="lime">ver</span>.</span><span class="lime">02.03.00.01.69.60.51</span>
+                    <h2 data-nosnippet><span class="green link" title="yamete kudasai..">~</span>/<span
+                            class="lime">security-protocol</span>::<span class="lime">ver</span>.</span><span
+                            class="lime">02.03.00.01.69.60.51</span>
                     </h2>
                 </div>
-                <div>
-                    <p class="center mono lime slogan" style="padding-top:50px">The DONKERATCHO™ Security Protocol 9000</p>
+                <div class="body">
+                    <p class="center mono lime slogan">The DONKERATCHO™ Security Protocol 9000</p>
                     <p class="center">This way too-fancy-named nugget stops unauthorized access to a <i>bestie</i> page,
                         <br>hanging somewhere on this interwebz. Luckily its encrypted! So much fun!</p><br>
-                    <p class="center">To see it, ya needa obtain ein <b class="purple">Security Protocol Checksum</b></p>
-                    <p class="center">Happen to have one? Enter it in the field <b class="green">below</b> and hit <b class="green">that noice buttony</b>!</p><br>
-                    <p class="center">Or, if you happen to have a <b class="green">Spellword</b> for the <b class="purple">Checksum</b>, you can exchange it <a href="#password">here</a>. </p>
+                    <p class="center">To see it, ya needa obtain ein <b class="purple">Security Protocol Checksum</b>
+                    </p>
+                    <p class="center">Happen to have one? Enter it in the field <b class="green">below</b> and hit <b
+                            class="green">that noice buttony</b>!</p><br>
+                    <p class="center">Or, if you happen to have a <b class="green">Spellword</b> for the <b
+                            class="purple">Checksum</b>, you can exchange it <a href="#password">here</a>. </p>
                     <p class="center" id="tokenStatus"></p>
-                    <form class="token-form" action="/ipr/module/" method="POST">
-                        <input type="text" size="36" required name="token" id="tokenField" placeholder="checksum here pwleas" maxlength="32" minlength="32"><br>
-                        <button type="submit" class="glitchpop" role="button" title="just do it.">check the fawking sum</button>
-                    </form>
-                    <p class="center green">If the <b class="purple">Checksum</b> is valid, the <i>bestie</i> page will open. <br>If not, then ne &lt;3. </p>
-                    <p class="center lime" style="margin-top:2em;"><b class="purple">{TRADE OFFER}</b> Spellword &rarr; Checksum </p>
                     <form class="token-form" method="GET" action="javascript:void(0);">
-                        <input type="text" required id="password" name="pass" placeholder="sell me da spellword" minlength="3" maxlength="32" size="36"><br>
+                        <input type="text" size="36" required name="token" id="tokenField"
+                            placeholder="checksum here pwleas" maxlength="32" minlength="32"><br>
+                        <button type="submit" class="glitchpop" role="button" title="just do it."
+                            onclick="checkPagie()">check the fawking sum</button>
+                    </form>
+                    <p class="center green">If the <b class="purple">Checksum</b> is valid, the <i>bestie</i> page will
+                        open. <br>If not, then ne &lt;3. </p>
+                    <p class="center lime" style="margin-top:2em;"><b class="purple">{TRADE OFFER}</b> Spellword &rarr;
+                        Checksum </p>
+                    <form class="token-form" method="GET" action="javascript:void(0);">
+                        <input type="text" required id="password" name="pass" placeholder="tell me da spellword"
+                            minlength="3" maxlength="32" size="36"><br>
                         <button class="glitchpop" role="button" onclick="generateToken()" title="just do it.">obtain da
                             checksum</button>
                     </form>
                     <div class="split">
-                        <p class="center"><br><span class="lime">checksum profile:</span><br>it's <b class="purple">not</b> case sensitive <br>each is <b class="purple">32</b> characters long<br><b class="purple">no</b> leading or trailing spaces <br>doesn't smell like <s><b class="purple">feet</b></s>                            cheesy nuggies </p>
-                        <p class="center"><br><span class="lime">spellword profile:</span><br>it <b class="purple">is</b> case sensitive
-                            <br>between <b class="purple">3</b> and <b class="purple">32</b> characters long<br><b class="purple">no</b> leading or trailing spaces<br>could be saying <b class="purple">sus</b> stuff </p>
+                        <p class="center"><br><span class="lime">checksum profile:</span><br>it's <b
+                                class="purple">not</b> case sensitive <br>each is <b class="purple">32</b> characters
+                            long<br><b class="purple">no</b> leading or trailing spaces <br>doesn't smell like <s><b
+                                    class="purple">feet</b></s> cheesy nuggies </p>
+                        <p class="center"><br><span class="lime">spellword profile:</span><br>it <b
+                                class="purple">is</b> case sensitive <br>between <b class="purple">3</b> and <b
+                                class="purple">32</b> characters long<br><b class="purple">no</b> leading or trailing
+                            spaces<br>could be saying <b class="purple">sus</b> stuff </p>
                     </div>
                 </div>
             </article>
         </div>
         <footer>
             <div class="text">
-                <code class="center gapped">/*&nbsp;copyright &copy; 2022 <a href="#" title="back to top">hoshinetsu</a>&nbsp;*/<br>/*&nbsp;made for <span class="glow-dark"><img src="face.png" style="height:1em" title="EM4E!"></span> with <span class="glow-dark" title="L-love..">🖤</span>&nbsp;*/<br>/*&nbsp;last modified 04.06.2024&nbsp;*/</code>
+                <code
+                    class="center gapped">/*&nbsp;copyright &copy; 2022 <a href="#" title="back to top">hoshinetsu</a>&nbsp;*/<br>/*&nbsp;made for <span class="glow-dark"><img src="face.png" style="height:1em" title="EM4E!"></span> with <span class="glow-dark" title="L-love..">🖤</span>&nbsp;*/<br>/*&nbsp;last modified 04.06.2024&nbsp;*/</code>
             </div>
         </footer>
     </main>
@@ -223,7 +238,7 @@
                 j = 0;
             for (; j < 4; j++)
                 s += hex_chr[(n >> (j * 8 + 4)) & 0x0F] +
-                hex_chr[(n >> (j * 8)) & 0x0F];
+                    hex_chr[(n >> (j * 8)) & 0x0F];
             return s;
         }
 
@@ -255,21 +270,38 @@
             }
         }
 
+        function displayStatus(classList, text) {
+            status.classList = "center " + classList;
+            status.style = "margin-top:2em;"
+            location.href = "#tokenStatus"
+            status.innerHTML = text + "..";
+        }
+
         function generateToken() {
-            const pwd = document.getElementById("password").value
+            const pwd = document.getElementById("password").value.trim();
             const status = document.getElementById("tokenStatus")
             const tkn = document.getElementById("tokenField")
             if (pwd.length >= 3 && pwd.length <= 32) {
-                tkn.value = md5(pwd)
-                status.innerHTML = "Got it! I've filled out the token field for you."
-                status.classList = "lime center"
+                tkn.value = md5(pwd);
+                displayStatus("lime", "Got it! I've filled out the token field for you.");
             } else {
-                status.innerHTML = 'Error occured. Invalid password length?'
-                status.classList = "red center"
+                displayStatus("red", 'Error: Invalid password length?');
             }
-            status.style = "margin-top:2em;"
-            location.href = "#tokenStatus"
             tkn.focus()
+        }
+
+        function checkPagie() {
+            const md5 = document.getElementById("tokenField").value.trim();
+            if (md5.startsWith("63d3ceee37f39b4c69bebdf84449d644")) {
+                const a = document.createElement('a')
+                            a.href = "module/data/6e2f3f346d48a11dd3bc5cb4e8f10e73/"
+                            document.body.appendChild(a)
+                            a.click()
+                            document.body.removeChild(a)
+            } else {
+                alert("Only one word is valid so- might be written differently..");
+                displayStatus("red", "Ajajaj, not the checksumche");
+            }
         }
     </script>
 </body>

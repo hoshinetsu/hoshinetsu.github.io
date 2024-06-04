@@ -191,8 +191,13 @@
         align-content: stretch;
         justify-content: center;
         align-items: stretch;
+
     }
-    
+
+    .body{
+        padding-top:50px;
+    }
+
     .banner {
         flex: 1;
     }
